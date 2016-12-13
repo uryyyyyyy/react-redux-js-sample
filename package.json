@@ -5,7 +5,8 @@
     "build": "webpack --config ./webpack.config.dev.js",
     "build:prod": "webpack --config ./webpack.config.prod.js",
     "flow": "flow",
-    "test": "mocha --compilers js:babel-register ./src/__tests__/test.spec.js"
+    "test:all": "mocha ./test-setup.js \"./src/**/*.spec.js\"",
+    "test:ut": "mocha ./test-setup.js"
   },
   "license": "MIT",
   "dependencies": {
@@ -21,7 +22,9 @@
     "babel-register": "^6.18.0",
     "chai": "^3.5.0",
     "flow-bin": "^0.37.0",
+    "jsdom": "^9.8.3",
     "mocha": "^3.2.0",
+    "react-addons-test-utils": "^15.4.1",
     "webpack": "^2.1.0-beta.28"
   }
 }
