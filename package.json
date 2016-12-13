@@ -1,0 +1,19 @@
+{
+  "name": "redux-todomvc",
+  "version": "0.1.0",
+  "scripts": {
+    "build": "webpack --config ./webpack.config.dev.js",
+    "build:prod": "webpack --config ./webpack.config.prod.js"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "react": "^15.4.1",
+    "react-dom": "^15.4.1"
+  },
+  "devDependencies": {
+    "babel-core": "^6.20.0",
+    "babel-loader": "^6.2.9",
+    "babel-preset-react": "^6.16.0",
+    "webpack": "^2.1.0-beta.28"
+  }
+}
