@@ -1,15 +1,17 @@
 {
-  "name": "redux-todomvc",
+  "name": "react-redux-js-sample",
   "version": "0.1.0",
   "scripts": {
     "build": "webpack --config ./webpack.config.dev.js",
     "build:prod": "webpack --config ./webpack.config.prod.js",
     "flow": "flow",
     "test:all": "mocha ./test-setup.js \"./src/**/*.spec.js\"",
-    "test:ut": "mocha ./test-setup.js"
+    "test:ut": "mocha ./test-setup.js",
+    "flow-typed": "flow-typed"
   },
   "license": "MIT",
   "dependencies": {
+    "flow-typed": "^2.0.0",
     "react": "^15.4.1",
     "react-dom": "^15.4.1"
   },
