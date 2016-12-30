@@ -1,7 +1,8 @@
+// @flow
 import * as React from "react";
 import {Counter} from "./Counter";
 import {connect} from "react-redux";
-import {Dispatch} from "redux";
+import type {Dispatch} from "redux";
 import {ActionDispatcher} from "./Actions";
 
 export default connect(

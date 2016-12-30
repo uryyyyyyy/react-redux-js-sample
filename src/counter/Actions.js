@@ -1,3 +1,6 @@
+// @flow
+
+import {JsonObject} from "./Entities";
 export const INCREMENT: string = 'counter/increment';
 export const DECREMENT: string = 'counter/decrement';
 export const FETCH_REQUEST_START = 'counter/fetch_request_start';
