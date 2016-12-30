@@ -1,5 +1,6 @@
 {
   "presets": [
+    "power-assert",
     "react",
     "es2015"
   ],
