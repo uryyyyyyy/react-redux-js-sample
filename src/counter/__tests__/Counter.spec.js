@@ -11,7 +11,8 @@ describe('<Counter />', function () {
     const actions:any = {};
     const state: CounterState = {num: 1, loadingCount: 1};
     const wrapper = shallow(<Counter value={state} actions={actions} />);
-    assert(wrapper.find('p').at(0).prop('children') === 'score: 1');
+    assert(wrapper.find('p').at(0).prop('children') === 'loading');
+    assert(wrapper.find('p').at(1).prop('children') === 'score: 1');
   });
 
   it('click increment button', () => {
@@ -34,5 +35,16 @@ describe('<Counter />', function () {
     const calls = spyCB.getCalls();
     assert(calls.length === 1);
     assert(JSON.stringify(calls[0].args) === JSON.stringify([2]));
+  });
+
+  it('click fetchAmount button', () => {
+    const spyCB = spy();
+    const actions = {fetchAmount: spyCB};
+    const state: CounterState = {num: 0, loadingCount: 0};
+    const wrapper = shallow(<Counter value={state} actions={actions} />);
+    wrapper.find('button').at(2).simulate('click');
+    const calls = spyCB.getCalls();
+    assert(calls.length === 1);
+    assert(JSON.stringify(calls[0].args) === JSON.stringify([]));
   });
 });
