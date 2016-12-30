@@ -4,7 +4,8 @@
   "scripts": {
     "build": "webpack --config ./webpack.config.dev.js",
     "build:prod": "webpack --config ./webpack.config.prod.js",
-    "flow": "flow"
+    "flow": "flow",
+    "flow-typed": "flow-typed install"
   },
   "license": "MIT",
   "dependencies": {
@@ -12,6 +13,7 @@
     "react-dom": "^15.4.1"
   },
   "devDependencies": {
+    "flow-typed": "^2.0.0",
     "babel-core": "^6.20.0",
     "babel-loader": "^6.2.9",
     "babel-plugin-transform-flow-strip-types": "^6.18.0",
