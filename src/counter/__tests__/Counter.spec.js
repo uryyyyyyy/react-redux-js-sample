@@ -1,7 +1,8 @@
-import assert from 'assert'
-import React from 'react'
-import { shallow } from 'enzyme'
-import {Counter} from '../Counter'
+import assert from 'assert';
+import deepEqual from 'deep-equal';
+import React from 'react';
+import { shallow } from 'enzyme';
+import {Counter} from '../Counter';
 import {CounterState} from "../Entities";
 import {spy} from "sinon";
 
@@ -23,7 +24,7 @@ describe('<Counter />', function () {
     wrapper.find('button').at(0).simulate('click');
     const calls = spyCB.getCalls();
     assert(calls.length === 1);
-    assert(JSON.stringify(calls[0].args) === JSON.stringify([3]));
+    assert(deepEqual(calls[0].args, [3]));
   });
 
   it('click decrement button', () => {
@@ -34,7 +35,7 @@ describe('<Counter />', function () {
     wrapper.find('button').at(1).simulate('click');
     const calls = spyCB.getCalls();
     assert(calls.length === 1);
-    assert(JSON.stringify(calls[0].args) === JSON.stringify([2]));
+    assert(deepEqual(calls[0].args, [2]));
   });
 
   it('click fetchAmount button', () => {
@@ -45,6 +46,6 @@ describe('<Counter />', function () {
     wrapper.find('button').at(2).simulate('click');
     const calls = spyCB.getCalls();
     assert(calls.length === 1);
-    assert(JSON.stringify(calls[0].args) === JSON.stringify([]));
+    assert(deepEqual(calls[0].args, []));
   });
 });
