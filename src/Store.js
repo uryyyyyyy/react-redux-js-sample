@@ -6,4 +6,4 @@ export default createStore(
   combineReducers({
     counter: counter
   })
-);
+)

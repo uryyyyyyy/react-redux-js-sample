@@ -1,13 +1,13 @@
 var webpack = require('webpack');
 
 module.exports = {
-  entry: './src/Index.jsx',
+  entry: './src/Index.js',
   output: {
     filename: 'bundle.js',
     path: './dist'
   },
   resolve: {
-    extensions: [".jsx", ".js"]
+    extensions: [".js"]
   },
   plugins: [
     new webpack.optimize.UglifyJsPlugin(),

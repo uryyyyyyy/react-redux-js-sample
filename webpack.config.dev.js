@@ -1,12 +1,12 @@
 module.exports = {
-  entry: './src/Index.jsx',
+  entry: './src/Index.js',
   output: {
     filename: 'bundle.js',
     path: './dist'
   },
   devtool: "source-map",
   resolve: {
-    extensions: [".jsx", ".js"]
+    extensions: [".js"]
   },
   module: {
     rules: [

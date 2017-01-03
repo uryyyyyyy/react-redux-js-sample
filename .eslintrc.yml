@@ -1,0 +1,19 @@
+---
+parser: babel-eslint
+
+extends: ["standard", "plugin:flowtype/recommended", "plugin:react/recommended"]
+
+env:
+  node: true
+  es6: true
+  mocha: true
+
+plugins:
+  - flowtype
+
+rules:
+  indent: [2, 2]
+  "react/prop-types": [0]
+
+globals:
+  fetch: false
