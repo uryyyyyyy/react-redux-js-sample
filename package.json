@@ -6,11 +6,13 @@
     "build:prod": "webpack --config ./webpack.config.prod.js",
     "flow": "flow",
     "flow-typed": "flow-typed install",
-    "test:unit": "mocha --compilers js:babel-register ",
-    "test:all": "mocha --compilers js:babel-register ./polyfill.js **/*.spec.js"
+    "test:unit": "mocha --compilers js:babel-register ./src/polyfill.js",
+    "test:all": "mocha --compilers js:babel-register ./src/polyfill.js ./polyfill.js **/*.spec.js",
+    "server": "node dev-server.js"
   },
   "license": "MIT",
   "dependencies": {
+    "babel-polyfill": "6.23.0",
     "react": "15.5.4",
     "react-dom": "15.5.4",
     "react-redux": "5.0.4",
@@ -26,6 +28,8 @@
     "babel-preset-react": "6.24.1",
     "deep-equal": "1.0.1",
     "enzyme": "2.8.2",
+    "express": "4.15.2",
+    "fetch-mock": "5.10.0",
     "flow-bin": "0.45.0",
     "flow-typed": "2.1.2",
     "mocha": "3.3.0",

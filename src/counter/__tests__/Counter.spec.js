@@ -12,7 +12,8 @@ describe('<Counter />', function () {
     const actions = {}
     const state: CounterState = {num: 1}
     const wrapper = shallow(<Counter value={state} actions={actions} />)
-    assert(wrapper.find('p').at(0).prop('children') === 'score: 1')
+    assert(wrapper.find('p').at(0).prop('children') === 'loading')
+    assert(wrapper.find('p').at(1).prop('children') === 'score: 1')
   })
 
   it('click increment button', () => {
