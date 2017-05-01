@@ -2,6 +2,7 @@
 .*/node_modules/.*
 
 [include]
+./flow-typed/npm
 
 [libs]
 
