@@ -1,16 +1,19 @@
-var webpack = require('webpack');
+const webpack = require('webpack')
 
 module.exports = {
   entry: './src/Index.jsx',
   output: {
-    filename: 'bundle.js',
-    path: './dist'
+    filename: './dist/bundle.js'
   },
   resolve: {
     extensions: [".jsx", ".js"]
   },
   plugins: [
-    new webpack.optimize.UglifyJsPlugin(),
+    new webpack.optimize.UglifyJsPlugin({
+      compress: {
+        warnings: false
+      }
+    }),
     new webpack.DefinePlugin({
       'process.env':{
         'NODE_ENV': JSON.stringify('production')
@@ -25,8 +28,5 @@ module.exports = {
         loader: "babel-loader"
       }
     ]
-  },
-  performance: {
-    hints:false
   }
-};
+}

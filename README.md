@@ -3,12 +3,11 @@
 
 ```
 npm install
-npm run webpack
+npm run build
 ```
 
 ```
 python -m SimpleHttpServer
-
 ```
 
 open localhost:8000
@@ -19,4 +18,6 @@ open localhost:8000
 npm run test
 ```
 
-## Contents
+## License
+
+MIT

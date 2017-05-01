@@ -1,8 +1,7 @@
 module.exports = {
   entry: './src/Index.jsx',
   output: {
-    filename: 'bundle.js',
-    path: './dist'
+    filename: './dist/bundle.js'
   },
   devtool: "source-map",
   resolve: {
@@ -16,8 +15,5 @@ module.exports = {
         loader: "babel-loader"
       }
     ]
-  },
-  performance: {
-    hints:false
   }
-};
+}
